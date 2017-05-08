@@ -12,6 +12,7 @@
 		E33D1A131EC115BF007E96C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33D1A111EC115BF007E96C9 /* Main.storyboard */; };
 		E33D1A151EC115BF007E96C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E33D1A141EC115BF007E96C9 /* Assets.xcassets */; };
 		E33D1A181EC115BF007E96C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33D1A161EC115BF007E96C9 /* LaunchScreen.storyboard */; };
+		E33D1A261EC11872007E96C9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E33D1A251EC11872007E96C9 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E33D1A141EC115BF007E96C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E33D1A171EC115BF007E96C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E33D1A191EC115BF007E96C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E33D1A251EC11872007E96C9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,63 @@
 		E33D1A0C1EC115BF007E96C9 /* ShoppingMadrid */ = {
 			isa = PBXGroup;
 			children = (
+				E33D1A251EC11872007E96C9 /* README.md */,
 				E33D1A0D1EC115BF007E96C9 /* AppDelegate.swift */,
-				E33D1A0F1EC115BF007E96C9 /* ViewController.swift */,
-				E33D1A111EC115BF007E96C9 /* Main.storyboard */,
-				E33D1A141EC115BF007E96C9 /* Assets.xcassets */,
-				E33D1A161EC115BF007E96C9 /* LaunchScreen.storyboard */,
-				E33D1A191EC115BF007E96C9 /* Info.plist */,
+				E33D1A1F1EC117AE007E96C9 /* Model */,
+				E33D1A201EC117B5007E96C9 /* View */,
+				E33D1A211EC117BB007E96C9 /* Controller */,
+				E33D1A221EC117C3007E96C9 /* Interactor */,
+				E33D1A231EC117CB007E96C9 /* Manager */,
+				E33D1A241EC11800007E96C9 /* Resources */,
 			);
 			path = ShoppingMadrid;
+			sourceTree = "<group>";
+		};
+		E33D1A1F1EC117AE007E96C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E33D1A201EC117B5007E96C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E33D1A161EC115BF007E96C9 /* LaunchScreen.storyboard */,
+				E33D1A111EC115BF007E96C9 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E33D1A211EC117BB007E96C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E33D1A0F1EC115BF007E96C9 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E33D1A221EC117C3007E96C9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		E33D1A231EC117CB007E96C9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		E33D1A241EC11800007E96C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E33D1A141EC115BF007E96C9 /* Assets.xcassets */,
+				E33D1A191EC115BF007E96C9 /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E33D1A261EC11872007E96C9 /* README.md in Sources */,
 				E33D1A101EC115BF007E96C9 /* ViewController.swift in Sources */,
 				E33D1A0E1EC115BF007E96C9 /* AppDelegate.swift in Sources */,
 			);
