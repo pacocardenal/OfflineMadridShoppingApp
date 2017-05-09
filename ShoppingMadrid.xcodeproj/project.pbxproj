@@ -13,6 +13,9 @@
 		E33D1A151EC115BF007E96C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E33D1A141EC115BF007E96C9 /* Assets.xcassets */; };
 		E33D1A181EC115BF007E96C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33D1A161EC115BF007E96C9 /* LaunchScreen.storyboard */; };
 		E33D1A261EC11872007E96C9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E33D1A251EC11872007E96C9 /* README.md */; };
+		E3C3C2891EC25D9D00A5F3B5 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C2881EC25D9D00A5F3B5 /* Shop.swift */; };
+		E3C3C28B1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */; };
+		E3C3C28D1EC2682600A5F3B5 /* ShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C28C1EC2682600A5F3B5 /* ShopsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		E33D1A171EC115BF007E96C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E33D1A191EC115BF007E96C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E33D1A251EC11872007E96C9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E3C3C2881EC25D9D00A5F3B5 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsApiManagerFakeImpl.swift; sourceTree = "<group>"; };
+		E3C3C28C1EC2682600A5F3B5 /* ShopsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 		E33D1A1F1EC117AE007E96C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E3C3C2881EC25D9D00A5F3B5 /* Shop.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -95,6 +102,7 @@
 		E33D1A221EC117C3007E96C9 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				E3C3C28C1EC2682600A5F3B5 /* ShopsInteractor.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -102,6 +110,7 @@
 		E33D1A231EC117CB007E96C9 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -190,7 +199,10 @@
 			files = (
 				E33D1A261EC11872007E96C9 /* README.md in Sources */,
 				E33D1A101EC115BF007E96C9 /* ViewController.swift in Sources */,
+				E3C3C28D1EC2682600A5F3B5 /* ShopsInteractor.swift in Sources */,
 				E33D1A0E1EC115BF007E96C9 /* AppDelegate.swift in Sources */,
+				E3C3C2891EC25D9D00A5F3B5 /* Shop.swift in Sources */,
+				E3C3C28B1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +364,7 @@
 				E33D1A1E1EC115BF007E96C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
