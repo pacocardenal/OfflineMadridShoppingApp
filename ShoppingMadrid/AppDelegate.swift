@@ -14,9 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         self.context = container.viewContext
-        testCoreData()
+        injectContextToFirstViewController()
         
         return true
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        guard let context = self.context else { return }
+        saveContext(context: context)
+    }
+    
+    func injectContextToFirstViewController() {
+        if let navController = window?.rootViewController as? UINavigationController,
+            let initialViewController = navController.topViewController as? ViewController
+        {
+            initialViewController.context = self.context
+        }
     }
     
     func testCoreData() {
