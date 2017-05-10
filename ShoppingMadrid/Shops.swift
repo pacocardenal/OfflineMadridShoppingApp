@@ -1,6 +1,6 @@
 import Foundation
 
-public class Shop {
+public class Shops {
     
     let name: String
     let logo: String

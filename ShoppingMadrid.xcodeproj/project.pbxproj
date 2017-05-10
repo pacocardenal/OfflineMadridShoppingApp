@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E30C9EB41EC3BA68007CA1CE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C9EB31EC3BA68007CA1CE /* CoreDataManager.swift */; };
+		E30C9EB71EC3BA92007CA1CE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E30C9EB61EC3BA92007CA1CE /* CoreData.framework */; };
+		E30C9EBA1EC3BAC8007CA1CE /* ShoppingMadrid.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E30C9EB81EC3BAC8007CA1CE /* ShoppingMadrid.xcdatamodeld */; };
 		E33D1A0E1EC115BF007E96C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D1A0D1EC115BF007E96C9 /* AppDelegate.swift */; };
 		E33D1A101EC115BF007E96C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D1A0F1EC115BF007E96C9 /* ViewController.swift */; };
 		E33D1A131EC115BF007E96C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33D1A111EC115BF007E96C9 /* Main.storyboard */; };
 		E33D1A151EC115BF007E96C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E33D1A141EC115BF007E96C9 /* Assets.xcassets */; };
 		E33D1A181EC115BF007E96C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33D1A161EC115BF007E96C9 /* LaunchScreen.storyboard */; };
-		E33D1A261EC11872007E96C9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E33D1A251EC11872007E96C9 /* README.md */; };
-		E3C3C2891EC25D9D00A5F3B5 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C2881EC25D9D00A5F3B5 /* Shop.swift */; };
+		E3C3C2891EC25D9D00A5F3B5 /* Shops.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C2881EC25D9D00A5F3B5 /* Shops.swift */; };
 		E3C3C28B1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */; };
 		E3C3C28D1EC2682600A5F3B5 /* ShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C28C1EC2682600A5F3B5 /* ShopsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E30C9EB31EC3BA68007CA1CE /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E30C9EB61EC3BA92007CA1CE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E30C9EB91EC3BAC8007CA1CE /* ShoppingMadrid.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingMadrid.xcdatamodel; sourceTree = "<group>"; };
 		E33D1A0A1EC115BF007E96C9 /* ShoppingMadrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingMadrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E33D1A0D1EC115BF007E96C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E33D1A0F1EC115BF007E96C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +32,7 @@
 		E33D1A171EC115BF007E96C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E33D1A191EC115BF007E96C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E33D1A251EC11872007E96C9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E3C3C2881EC25D9D00A5F3B5 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		E3C3C2881EC25D9D00A5F3B5 /* Shops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shops.swift; sourceTree = "<group>"; };
 		E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsApiManagerFakeImpl.swift; sourceTree = "<group>"; };
 		E3C3C28C1EC2682600A5F3B5 /* ShopsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,17 +42,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E30C9EB71EC3BA92007CA1CE /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E30C9EB51EC3BA92007CA1CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E30C9EB61EC3BA92007CA1CE /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E33D1A011EC115BF007E96C9 = {
 			isa = PBXGroup;
 			children = (
 				E33D1A0C1EC115BF007E96C9 /* ShoppingMadrid */,
 				E33D1A0B1EC115BF007E96C9 /* Products */,
+				E30C9EB51EC3BA92007CA1CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,7 +92,8 @@
 		E33D1A1F1EC117AE007E96C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E3C3C2881EC25D9D00A5F3B5 /* Shop.swift */,
+				E3C3C2881EC25D9D00A5F3B5 /* Shops.swift */,
+				E30C9EB81EC3BAC8007CA1CE /* ShoppingMadrid.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -111,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */,
+				E30C9EB31EC3BA68007CA1CE /* CoreDataManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -197,11 +214,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E33D1A261EC11872007E96C9 /* README.md in Sources */,
 				E33D1A101EC115BF007E96C9 /* ViewController.swift in Sources */,
 				E3C3C28D1EC2682600A5F3B5 /* ShopsInteractor.swift in Sources */,
 				E33D1A0E1EC115BF007E96C9 /* AppDelegate.swift in Sources */,
-				E3C3C2891EC25D9D00A5F3B5 /* Shop.swift in Sources */,
+				E30C9EBA1EC3BAC8007CA1CE /* ShoppingMadrid.xcdatamodeld in Sources */,
+				E3C3C2891EC25D9D00A5F3B5 /* Shops.swift in Sources */,
+				E30C9EB41EC3BA68007CA1CE /* CoreDataManager.swift in Sources */,
 				E3C3C28B1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +385,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E30C9EB81EC3BAC8007CA1CE /* ShoppingMadrid.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E30C9EB91EC3BAC8007CA1CE /* ShoppingMadrid.xcdatamodel */,
+			);
+			currentVersion = E30C9EB91EC3BAC8007CA1CE /* ShoppingMadrid.xcdatamodel */;
+			path = ShoppingMadrid.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E33D1A021EC115BF007E96C9 /* Project object */;
 }

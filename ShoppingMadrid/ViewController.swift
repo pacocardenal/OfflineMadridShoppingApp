@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var shops: [Shop]!
+    var shops: [Shops]!
     
     override func viewDidLoad() {
         super.viewDidLoad()

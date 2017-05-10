@@ -7,7 +7,7 @@ public class ShopsInteractor {
         self.manager = manager
     }
     
-    public func execute(completion: @escaping ([Shop]) -> Void) {
+    public func execute(completion: @escaping ([Shops]) -> Void) {
         manager.downloadShops { (shops) in
             assert(Thread.current == Thread.main)
             
