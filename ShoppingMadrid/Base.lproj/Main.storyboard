@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="865" y="-568"/>
         </scene>
-        <!--View Controller-->
+        <!--Shops View Controller-->
         <scene sceneID="3Xo-lU-37R">
             <objects>
-                <viewController id="mQy-D2-iiB" sceneMemberID="viewController">
+                <viewController id="mQy-D2-iiB" customClass="ShopsViewController" customModule="ShoppingMadrid" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PaH-i7-h4R"/>
                         <viewControllerLayoutGuide type="bottom" id="rDX-Bo-O2N"/>
@@ -53,11 +53,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K5V-lr-8vt">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K5V-lr-8vt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Jdw-WG-VFm">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShopCell" rowHeight="44" id="Jdw-WG-VFm">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jdw-WG-VFm" id="ERK-5N-4Um">
@@ -66,20 +66,27 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mQy-D2-iiB" id="2CC-S5-Fau"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rDX-Bo-O2N" firstAttribute="top" secondItem="K5V-lr-8vt" secondAttribute="bottom" id="7B2-aK-8ct"/>
                             <constraint firstAttribute="trailing" secondItem="K5V-lr-8vt" secondAttribute="trailing" id="LOi-n8-2IU"/>
-                            <constraint firstItem="K5V-lr-8vt" firstAttribute="top" secondItem="PaH-i7-h4R" secondAttribute="bottom" id="SLA-Xw-65r"/>
+                            <constraint firstItem="K5V-lr-8vt" firstAttribute="height" secondItem="bJ6-ur-Xe5" secondAttribute="height" id="LcI-rf-rjR"/>
+                            <constraint firstItem="K5V-lr-8vt" firstAttribute="width" secondItem="bJ6-ur-Xe5" secondAttribute="width" id="ZrO-d0-eRu"/>
                             <constraint firstItem="K5V-lr-8vt" firstAttribute="leading" secondItem="bJ6-ur-Xe5" secondAttribute="leading" id="dlX-lo-Xef"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="K5V-lr-8vt" id="Oa5-fU-lSv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAs-n7-GIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="-568"/>
+            <point key="canvasLocation" x="1685.5999999999999" y="-568.06596701649175"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H0T-Oo-O6C">
