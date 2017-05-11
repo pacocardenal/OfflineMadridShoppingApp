@@ -1,4 +1,3 @@
-import Foundation
 import CoreData
 
 public typealias ErrorClosure = (Error) -> Void

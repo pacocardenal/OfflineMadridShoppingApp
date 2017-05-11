@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         assert(Thread.current == Thread.main)
         guard let context = context else { return }
         
-        ShopsInteractor(manager: ShopsApiManagerFakeImpl(context: context), context: context).execute { (shops) in
+        ShopsInteractor(manager: ShopsApiManagerNSUrlSessionImpl(context: context), context: context).execute { (shops) in
             self.shops = shops
             
             guard self.shops.count > 0 else { return }

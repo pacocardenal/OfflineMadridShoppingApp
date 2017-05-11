@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShoppingMadrid/ShopsApiManagerFakeImpl.swift"
-            timestampString = "516146590.804335"
+            timestampString = "516233519.039668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "downloadShops(completion:onError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShoppingMadrid/ViewController.swift"
-            timestampString = "516146576.632961"
+            filePath = "ShoppingMadrid/ShopsApiManagerNSUrlSessionImpl.swift"
+            timestampString = "516234432.481225"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "getShops()"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "downloadShops(completion:onError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,110 +41,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShoppingMadrid/ViewController.swift"
-            timestampString = "516146614.89246"
+            filePath = "ShoppingMadrid/ShopsApiManagerNSUrlSessionImpl.swift"
+            timestampString = "516234456.911894"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "getShops()"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "downloadShops(completion:onError:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShoppingMadrid.ViewController.getShops () -&gt; ()"
-                  moduleName = "ShoppingMadrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talentomobile/Desktop/ShoppingMadrid/ShoppingMadrid/ViewController.swift"
-                  timestampString = "516230980.823786"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "336">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShoppingMadrid.ViewController.(getShops () -&gt; ()).(closure #1)"
-                  moduleName = "ShoppingMadrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talentomobile/Desktop/ShoppingMadrid/ShoppingMadrid/ViewController.swift"
-                  timestampString = "516230980.826634"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShoppingMadrid/AppDelegate.swift"
-            timestampString = "516146693.189765"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShoppingMadrid/AppDelegate.swift"
-            timestampString = "516146713.150884"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "injectContextToFirstViewController()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShoppingMadrid.AppDelegate.injectContextToFirstViewController () -&gt; ()"
-                  moduleName = "ShoppingMadrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talentomobile/Desktop/ShoppingMadrid/ShoppingMadrid/AppDelegate.swift"
-                  timestampString = "516230980.859936"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "22">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShoppingMadrid.AppDelegate.injectContextToFirstViewController () -&gt; ()"
-                  moduleName = "ShoppingMadrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talentomobile/Desktop/ShoppingMadrid/ShoppingMadrid/AppDelegate.swift"
-                  timestampString = "516230980.863001"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "272">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

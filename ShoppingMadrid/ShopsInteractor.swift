@@ -2,10 +2,10 @@ import Foundation
 import CoreData
 
 public class ShopsInteractor {
-    let manager: ShopsApiManagerFakeImpl
+    let manager: ShopsApiManagerNSUrlSessionImpl
     var context: NSManagedObjectContext?
     
-    public init(manager: ShopsApiManagerFakeImpl, context: NSManagedObjectContext) {
+    public init(manager: ShopsApiManagerNSUrlSessionImpl, context: NSManagedObjectContext) {
         self.manager = manager
         self.context = context
     }
@@ -13,7 +13,7 @@ public class ShopsInteractor {
     public func execute(completion: @escaping ([Shop]) -> Void) {
         guard let context = context else { return }
         
-        ShopsApiManagerFakeImpl(context: context).downloadShops { (shops) in
+        ShopsApiManagerNSUrlSessionImpl(context: context).downloadShops { (shops) in
             assert(Thread.current == Thread.main)
             
             completion(shops)

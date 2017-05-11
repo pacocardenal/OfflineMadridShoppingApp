@@ -6,7 +6,7 @@ extension Shop {
         let fetchRequest: NSFetchRequest<Shop> = Shop.fetchRequest()
         fetchRequest.fetchBatchSize = 20
         
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
