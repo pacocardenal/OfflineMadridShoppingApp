@@ -14,7 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         self.context = container.viewContext
+        zapDataInCoreDataEntity(entity: "Shop")
+        
         injectContextToFirstViewController()
+        
+        testFunctions()
         
         return true
     }
@@ -40,6 +44,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             
         }
+    }
+    
+    func testFunctions() {
+//        let url = "http://madrid-shops.com//media//shops//logo-cortefiel-200.jpg";
+//        
+//        let theFileName = (url as NSString).lastPathComponent
+//        print(theFileName)
+    }
+    
+    func zapDataInCoreDataEntity(entity: String) {
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        let request = NSBatchDeleteRequest(fetchRequest: fetch)
+        let _ = try! context?.execute(request)
     }
 
 }
