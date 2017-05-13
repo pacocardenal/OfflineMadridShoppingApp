@@ -38,10 +38,10 @@ public class ShopsApiManagerNSUrlSessionImpl {
                 //var logo: String?
                 for aShop in shops {
                     //logo = self.getFilenameFromUrl(url: aShop["logo_img"] as! String)
-                    shop = Shop(context: context, name: aShop["name"] as! String, logo: aShop["logo_img"] as! String)
+                    shop = Shop(context: context, name: aShop["name"] as! String, logoUrl: aShop["logo_img"] as! String, logoName: self.getFilenameFromUrl(aShop["logo_img"] as! String))
                     self.downloadShopImage(shop: shop!, completion: { (image, theShop) in
-                        guard let logo = theShop.logo else { return }
-                        self.saveInDocumentsDirectoryWithImage(image, name: self.getFilenameFromUrl(logo))
+                        guard let logoName = theShop.logoName else { return }
+                        self.saveInDocumentsDirectoryWithImage(image, name: logoName)
                     })
                     allShops.append(shop!)
                 }
@@ -63,7 +63,7 @@ public class ShopsApiManagerNSUrlSessionImpl {
     
     public func downloadShopImage(shop: Shop, completion: @escaping (UIImage, Shop) -> Void, onError: ErrorClosure? = nil) {
         
-        guard let urlString = shop.logo, let url = URL(string: urlString) else { return }
+        guard let urlString = shop.logoUrl, let url = URL(string: urlString) else { return }
         
         let session = URLSession.shared
         let task = session.dataTask(with: url) { (data, response, error) in
@@ -79,7 +79,7 @@ public class ShopsApiManagerNSUrlSessionImpl {
                     completion(image, shop)
                 }
             } catch {
-                print("Error in downloadCardImage: " + error.localizedDescription)
+                print("Error in downloadShopImage: " + error.localizedDescription)
             }
             
         }
