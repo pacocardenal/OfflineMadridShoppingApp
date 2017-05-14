@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         injectContextToFirstViewController()
         
-        testFunctions()
+        //testFunctions()
         
         return true
     }

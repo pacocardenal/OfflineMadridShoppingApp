@@ -26,11 +26,14 @@ class DetailViewController: UIViewController {
         let nsUserDomainMask    = FileManager.SearchPathDomainMask.userDomainMask
         let paths               = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
         
-        if let dirPath          = paths.first
-        {
-            let imageURL = URL(fileURLWithPath: dirPath).appendingPathComponent((shop?.mapName)!)
-            let image    = UIImage(contentsOfFile: imageURL.path)
-            mapImageView.image = image
+        if let mapName = shop?.mapName {
+            
+            if let dirPath          = paths.first
+            {
+                let imageURL = URL(fileURLWithPath: dirPath).appendingPathComponent((shop?.mapName)!)
+                let image    = UIImage(contentsOfFile: imageURL.path)
+                mapImageView.image = image
+            }
         }
         
         

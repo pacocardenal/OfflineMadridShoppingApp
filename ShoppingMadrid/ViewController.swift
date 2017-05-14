@@ -12,7 +12,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        //getShops()
+        let isDownloaded = UserDefaults.standard.bool(forKey: "downloaded")
+        
+        if (!isDownloaded) {
+            getShops()
+        }
         
     }
     
@@ -29,6 +33,7 @@ class ViewController: UIViewController {
                 print(shop.name!)
             }
             self.activityIndicator.stopAnimating()
+            UserDefaults.standard.set(true, forKey: "downloaded")
         }
     }
     
