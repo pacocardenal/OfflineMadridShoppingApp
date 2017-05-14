@@ -43,7 +43,7 @@ public class ShopsApiManagerGCDImpl {
                     } else {
                         longitude = 0
                     }
-                    shop = Shop(context: context, name: aShop["name"] as! String, logoUrl: aShop["logo_img"] as! String, logoName: self.getFilenameFromUrl(aShop["logo_img"] as! String), latitude: latitude, longitude: longitude, descriptionSpa: aShop["description_es"] as! String, descriptionEng: aShop["description_en"] as! String, backgroundUrl: aShop["img"] as! String, backgroundName: self.getFilenameFromUrl(aShop["img"] as! String), address: aShop["address"] as! String)
+                    shop = Shop(context: context, name: aShop["name"] as! String, logoUrl: aShop["logo_img"] as! String, logoName: self.getFilenameFromUrl(aShop["logo_img"] as! String), latitude: latitude, longitude: longitude, descriptionSpa: aShop["description_es"] as! String, descriptionEng: aShop["description_en"] as! String, backgroundUrl: aShop["img"] as! String, backgroundName: self.getFilenameFromUrl(aShop["img"] as! String), address: aShop["address"] as! String, mapName: "\(aShop["name"] as! String)Map")
                     self.downloadShopImage(urlString: (shop?.logoUrl)!, shop: shop!, completion: { (image, theShop) in
                         guard let logoName = theShop.logoName else { return }
                         self.saveInDocumentsDirectoryWithImage(image, name: logoName)
@@ -51,6 +51,10 @@ public class ShopsApiManagerGCDImpl {
                     self.downloadShopImage(urlString: (shop?.backgroundUrl)!, shop: shop!, completion: { (image, theShop) in
                         guard let backgroundName = theShop.backgroundName else { return }
                         self.saveInDocumentsDirectoryWithImage(image, name: backgroundName)
+                    })
+                    self.downloadMapImage(latitude: (shop?.latitude)!, longitude: (shop?.longitude)!, shop: shop!, completion: { (image, theShop) in
+                        guard let mapName = theShop.mapName else { return }
+                        self.saveInDocumentsDirectoryWithImage(image, name: mapName)
                     })
                     allShops.append(shop!)
                     
@@ -83,6 +87,25 @@ public class ShopsApiManagerGCDImpl {
                 print("Error in downloadShopImage: " + error.localizedDescription)
             }
         }
+    }
+    
+    public func downloadMapImage(latitude: Double, longitude: Double, shop: Shop, completion: @escaping (UIImage, Shop) -> Void, onError: ErrorClosure? = nil) {
+        
+        let urlString = "http://maps.googleapis.com/maps/api/staticmap?center=\(latitude),\(longitude)&zoom=17&size=320x220&scale=2&markers=%7Ccolor:0x9C7B14%7C\(latitude),\(longitude)"
+        guard let url = URL(string: urlString) else { return }
+        
+        DispatchQueue.global().sync {
+            do {
+                let data = try Data(contentsOf: url)
+                guard let image = UIImage(data: data) else { return }
+                DispatchQueue.main.async {
+                    completion(image, shop)
+                }
+            } catch {
+                print("Error in downloadShopImage: " + error.localizedDescription)
+            }
+        }
+        
     }
     
     //MARK: Utils

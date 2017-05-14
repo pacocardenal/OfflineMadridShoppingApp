@@ -204,6 +204,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="UcP-pE-pwD" id="cSX-FY-FHs"/>
                         <outlet property="descriptionLabel" destination="qHZ-50-VP7" id="nYx-CQ-89Y"/>
+                        <outlet property="mapImageView" destination="R89-ie-0Jn" id="udD-Zu-iQ9"/>
                         <outlet property="nameLabel" destination="mF3-ow-PIX" id="VcE-SS-FX4"/>
                     </connections>
                 </viewController>

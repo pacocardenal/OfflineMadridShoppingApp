@@ -3,7 +3,7 @@ import UIKit
 
 extension Shop {
     
-    public convenience init(context: NSManagedObjectContext, name: String, logoUrl: String, logoName: String, latitude: Double, longitude: Double, descriptionSpa: String, descriptionEng: String, backgroundUrl: String, backgroundName: String, address: String) {
+    public convenience init(context: NSManagedObjectContext, name: String, logoUrl: String, logoName: String, latitude: Double, longitude: Double, descriptionSpa: String, descriptionEng: String, backgroundUrl: String, backgroundName: String, address: String, mapName: String) {
         self.init(context: context)
         
         self.name = name
@@ -16,6 +16,7 @@ extension Shop {
         self.backgroundUrl = backgroundUrl
         self.backgroundName = backgroundName
         self.address = address
+        self.mapName = mapName
     }
 
 }

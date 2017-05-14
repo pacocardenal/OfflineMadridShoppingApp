@@ -10,9 +10,10 @@
         <attribute name="logoName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="logoUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mapName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Shop" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="Shop" positionX="-63" positionY="-18" width="128" height="210"/>
     </elements>
 </model>

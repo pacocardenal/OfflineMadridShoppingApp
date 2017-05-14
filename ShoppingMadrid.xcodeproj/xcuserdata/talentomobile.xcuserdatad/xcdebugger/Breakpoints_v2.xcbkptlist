@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShoppingMadrid/ShopsApiManagerGCDImpl.swift"
-            timestampString = "516486707.496731"
+            timestampString = "516489559.502833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "downloadShopImage(urlString:shop:completion:onError:)"
             landmarkType = "7">
          </BreakpointContent>
