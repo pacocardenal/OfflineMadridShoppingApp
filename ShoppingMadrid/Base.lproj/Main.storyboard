@@ -127,6 +127,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="G6U-0w-7GA" id="z6b-vy-RM9"/>
                         <outlet property="tableView" destination="K5V-lr-8vt" id="Oa5-fU-lSv"/>
                     </connections>
                 </viewController>
