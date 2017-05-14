@@ -37,8 +37,20 @@ public class ShopsApiManagerNSUrlSessionImpl {
                 var allShops: [Shop] = []
                 //var logo: String?
                 for aShop in shops {
+                    var latitude: Double
+                    var longitude: Double
+                    if let lat = Double(aShop["gps_lat"] as! String) {
+                        latitude = lat
+                    } else {
+                        latitude = 0
+                    }
+                    if let lon = Double(aShop["gps_lon"] as! String) {
+                        longitude = lon
+                    } else {
+                        longitude = 0
+                    }
                     //logo = self.getFilenameFromUrl(url: aShop["logo_img"] as! String)
-                    shop = Shop(context: context, name: aShop["name"] as! String, logoUrl: aShop["logo_img"] as! String, logoName: self.getFilenameFromUrl(aShop["logo_img"] as! String), latitude: aShop["gps_lat"] as! Double, longitude: aShop["gps_lon"] as! Double)
+                    shop = Shop(context: context, name: aShop["name"] as! String, logoUrl: aShop["logo_img"] as! String, logoName: self.getFilenameFromUrl(aShop["logo_img"] as! String), latitude: latitude, longitude: longitude, descriptionSpa: aShop["description_es"] as! String, descriptionEng: aShop["description_en"] as! String, backgroundUrl: aShop["img"] as! String, backgroundName: self.getFilenameFromUrl(aShop["img"] as! String))
                     self.downloadShopImage(shop: shop!, completion: { (image, theShop) in
                         guard let logoName = theShop.logoName else { return }
                         self.saveInDocumentsDirectoryWithImage(image, name: logoName)

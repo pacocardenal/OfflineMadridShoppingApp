@@ -43,10 +43,14 @@ public class ShopsApiManagerGCDImpl {
                     } else {
                         longitude = 0
                     }
-                    shop = Shop(context: context, name: aShop["name"] as! String, logoUrl: aShop["logo_img"] as! String, logoName: self.getFilenameFromUrl(aShop["logo_img"] as! String), latitude: latitude, longitude: longitude)
-                    self.downloadShopImage(shop: shop!, completion: { (image, theShop) in
+                    shop = Shop(context: context, name: aShop["name"] as! String, logoUrl: aShop["logo_img"] as! String, logoName: self.getFilenameFromUrl(aShop["logo_img"] as! String), latitude: latitude, longitude: longitude, descriptionSpa: aShop["description_es"] as! String, descriptionEng: aShop["description_en"] as! String, backgroundUrl: aShop["img"] as! String, backgroundName: self.getFilenameFromUrl(aShop["img"] as! String))
+                    self.downloadShopImage(urlString: (shop?.logoUrl)!, shop: shop!, completion: { (image, theShop) in
                         guard let logoName = theShop.logoName else { return }
                         self.saveInDocumentsDirectoryWithImage(image, name: logoName)
+                    })
+                    self.downloadShopImage(urlString: (shop?.backgroundUrl)!, shop: shop!, completion: { (image, theShop) in
+                        guard let backgroundName = theShop.backgroundName else { return }
+                        self.saveInDocumentsDirectoryWithImage(image, name: backgroundName)
                     })
                     allShops.append(shop!)
                     
@@ -64,9 +68,9 @@ public class ShopsApiManagerGCDImpl {
         }
     }
     
-    public func downloadShopImage(shop: Shop, completion: @escaping (UIImage, Shop) -> Void, onError: ErrorClosure? = nil) {
+    public func downloadShopImage(urlString: String, shop: Shop, completion: @escaping (UIImage, Shop) -> Void, onError: ErrorClosure? = nil) {
         
-        guard let urlString = shop.logoUrl, let url = URL(string: urlString) else { return }
+        guard let url = URL(string: urlString) else { return }
         
         DispatchQueue.global().sync {
             do {
