@@ -46,6 +46,7 @@
                     <navigationItem key="navigationItem" id="o9q-VI-Hee"/>
                     <connections>
                         <outlet property="activityIndicator" destination="FEI-tK-Oqc" id="dW3-R8-oc7"/>
+                        <outlet property="goShoppingButton" destination="eSI-KE-d2a" id="wE6-Lc-dqL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

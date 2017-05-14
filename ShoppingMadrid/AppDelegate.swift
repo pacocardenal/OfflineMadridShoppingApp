@@ -57,6 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
         let request = NSBatchDeleteRequest(fetchRequest: fetch)
         let _ = try! context?.execute(request)
+        
+        UserDefaults.standard.removeObject(forKey: "downloaded")
     }
 
 }
