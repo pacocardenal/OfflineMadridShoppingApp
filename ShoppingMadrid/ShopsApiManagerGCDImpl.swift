@@ -43,7 +43,7 @@ public class ShopsApiManagerGCDImpl {
                     } else {
                         longitude = 0
                     }
-                    shop = Shop(context: context, name: aShop["name"] as! String, logoUrl: aShop["logo_img"] as! String, logoName: self.getFilenameFromUrl(aShop["logo_img"] as! String), latitude: latitude, longitude: longitude, descriptionSpa: aShop["description_es"] as! String, descriptionEng: aShop["description_en"] as! String, backgroundUrl: aShop["img"] as! String, backgroundName: self.getFilenameFromUrl(aShop["img"] as! String))
+                    shop = Shop(context: context, name: aShop["name"] as! String, logoUrl: aShop["logo_img"] as! String, logoName: self.getFilenameFromUrl(aShop["logo_img"] as! String), latitude: latitude, longitude: longitude, descriptionSpa: aShop["description_es"] as! String, descriptionEng: aShop["description_en"] as! String, backgroundUrl: aShop["img"] as! String, backgroundName: self.getFilenameFromUrl(aShop["img"] as! String), address: aShop["address"] as! String)
                     self.downloadShopImage(urlString: (shop?.logoUrl)!, shop: shop!, completion: { (image, theShop) in
                         guard let logoName = theShop.logoName else { return }
                         self.saveInDocumentsDirectoryWithImage(image, name: logoName)
