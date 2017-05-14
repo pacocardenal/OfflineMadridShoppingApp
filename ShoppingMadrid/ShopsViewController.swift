@@ -9,6 +9,8 @@ class ShopsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.fetchedResultsController.delegate = self
+        self.tableView.dataSource = self
     }
 
 }

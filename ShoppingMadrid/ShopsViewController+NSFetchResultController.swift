@@ -7,7 +7,16 @@ extension ShopsViewController: NSFetchedResultsControllerDelegate {
             return _fetchedResultsController!
         }
         
-        _fetchedResultsController = NSFetchedResultsController(fetchRequest: Shop.fetchRequestOrderedByName(), managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: "Shop")
+        let fetchRequest: NSFetchRequest<Shop> = Shop.fetchRequest()
+        fetchRequest.fetchBatchSize = 20
+        
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        // Edit the section name key path and cache name if appropriate.
+        // nil for section name key path means "no sections".
+        _fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: "Master")
         _fetchedResultsController?.delegate = self
         
         do {

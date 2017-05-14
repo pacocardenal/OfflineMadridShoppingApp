@@ -15,7 +15,7 @@ extension ShopsViewController: UITableViewDataSource {
         
         //cell.textLabel?.text = self.fetchedResultsController.object(at: indexPath).name
         cell.shop = self.fetchedResultsController.object(at: indexPath)
-        cell.nameLabel.text = "Test"
+        //cell.nameLabel.text = "Test"
         
         return cell
     }
