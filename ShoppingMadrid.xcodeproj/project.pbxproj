@@ -16,6 +16,7 @@
 		E31089F71EC50D9300C52F22 /* ShopsViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31089F61EC50D9300C52F22 /* ShopsViewController+UITableView.swift */; };
 		E31089F91EC5142900C52F22 /* ShopsApiManagerNSUrlSessionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31089F81EC5142900C52F22 /* ShopsApiManagerNSUrlSessionImpl.swift */; };
 		E31089FD1EC5184500C52F22 /* Shop+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31089FC1EC5184500C52F22 /* Shop+Inits.swift */; };
+		E335FDF21EC8CCF3009CD0FB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335FDF11EC8CCF3009CD0FB /* DetailViewController.swift */; };
 		E33D1A0E1EC115BF007E96C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D1A0D1EC115BF007E96C9 /* AppDelegate.swift */; };
 		E33D1A101EC115BF007E96C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D1A0F1EC115BF007E96C9 /* ViewController.swift */; };
 		E33D1A131EC115BF007E96C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33D1A111EC115BF007E96C9 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		E31089F61EC50D9300C52F22 /* ShopsViewController+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShopsViewController+UITableView.swift"; sourceTree = "<group>"; };
 		E31089F81EC5142900C52F22 /* ShopsApiManagerNSUrlSessionImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsApiManagerNSUrlSessionImpl.swift; sourceTree = "<group>"; };
 		E31089FC1EC5184500C52F22 /* Shop+Inits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Shop+Inits.swift"; sourceTree = "<group>"; };
+		E335FDF11EC8CCF3009CD0FB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E33D1A0A1EC115BF007E96C9 /* ShoppingMadrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingMadrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E33D1A0D1EC115BF007E96C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E33D1A0F1EC115BF007E96C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				E33D1A0F1EC115BF007E96C9 /* ViewController.swift */,
 				E31089F31EC50D0200C52F22 /* ShopsViewController */,
+				E335FDF11EC8CCF3009CD0FB /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				E31089FD1EC5184500C52F22 /* Shop+Inits.swift in Sources */,
 				E31089F01EC5071E00C52F22 /* Shop+Utils.swift in Sources */,
 				E30C9EB41EC3BA68007CA1CE /* CoreDataManager.swift in Sources */,
+				E335FDF21EC8CCF3009CD0FB /* DetailViewController.swift in Sources */,
 				E3C3C28B1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift in Sources */,
 				E31089F91EC5142900C52F22 /* ShopsApiManagerNSUrlSessionImpl.swift in Sources */,
 			);

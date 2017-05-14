@@ -3,7 +3,7 @@ import CoreData
 import MapKit
 
 class ShopsViewController: UIViewController, MKMapViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
     var context: NSManagedObjectContext?
     var _fetchedResultsController: NSFetchedResultsController<Shop>? = nil
@@ -89,19 +89,36 @@ class ShopsViewController: UIViewController, MKMapViewDelegate {
         
         return annotationView
     }
-
-}
-
-func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-    guard !(view.annotation is MKUserLocation) else { return }
     
-    mapView.setCenter((view.annotation?.coordinate)!, animated: true)
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard !(view.annotation is MKUserLocation) else { return }
+        
+        mapView.setCenter((view.annotation?.coordinate)!, animated: true)
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        print("tapped annotation " + ((view.annotation?.title)!)!)
+        //[self performSegueWithIdentifier:@"Details" sender:view];
+        performSegue(withIdentifier: "DetailsSegue", sender: view)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "DetailsSegue" {
+                let vc = segue.destination as! DetailViewController
+                vc.context = self.context
+            }
+            if identifier == "DetailsCellSegue" {
+                let indexPath = tableView.indexPathsForSelectedRows?.first
+                let shop = fetchedResultsController.object(at: indexPath!)
+                let vc = segue.destination as! DetailViewController
+                vc.context = context
+                vc.shop = shop
+            }
+        }
+    }
+    
 }
-
-func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-    print("tapped annotation " + ((view.annotation?.title)!)!)
-}
-
 
 class MapPin: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D

@@ -72,7 +72,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jdw-WG-VFm" id="ERK-5N-4Um">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Ma-np-f7i">
@@ -101,6 +101,7 @@
                                         <connections>
                                             <outlet property="logoImageView" destination="9Ma-np-f7i" id="84Q-9K-nO9"/>
                                             <outlet property="nameLabel" destination="RS3-Zd-TKX" id="uhd-lk-zaf"/>
+                                            <segue destination="PCb-rg-EYY" kind="show" identifier="DetailsCellSegue" id="DBt-d8-UdQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -129,11 +130,45 @@
                     <connections>
                         <outlet property="mapView" destination="G6U-0w-7GA" id="z6b-vy-RM9"/>
                         <outlet property="tableView" destination="K5V-lr-8vt" id="Oa5-fU-lSv"/>
+                        <segue destination="PCb-rg-EYY" kind="show" identifier="DetailsSegue" id="f8G-bb-dU6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAs-n7-GIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1685.5999999999999" y="-568.06596701649175"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="0Y1-4n-8yK">
+            <objects>
+                <viewController id="PCb-rg-EYY" customClass="DetailViewController" customModule="ShoppingMadrid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WAC-BI-pQa"/>
+                        <viewControllerLayoutGuide type="bottom" id="p2D-hA-BGD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BS9-5U-zv0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF3-ow-PIX">
+                                <rect key="frame" x="166" y="119" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9993161559" green="0.57788419719999995" blue="0.0011074217039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mF3-ow-PIX" firstAttribute="centerX" secondItem="BS9-5U-zv0" secondAttribute="centerX" id="Nlj-4o-hX3"/>
+                            <constraint firstItem="mF3-ow-PIX" firstAttribute="top" secondItem="WAC-BI-pQa" secondAttribute="bottom" constant="55" id="dQt-Ms-skj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="mF3-ow-PIX" id="VcE-SS-FX4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44Y-mZ-ux0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2425" y="-569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H0T-Oo-O6C">
@@ -154,4 +189,7 @@
             <point key="canvasLocation" x="93.599999999999994" y="-568.06596701649175"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DBt-d8-UdQ"/>
+    </inferredMetricsTieBreakers>
 </document>
