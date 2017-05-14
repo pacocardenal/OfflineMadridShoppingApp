@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShoppingMadrid/ShopsApiManagerNSUrlSessionImpl.swift"
-            timestampString = "516321030.722341"
+            filePath = "ShoppingMadrid/ShopsViewController+UITableView.swift"
+            timestampString = "516356812.267521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "downloadShops(completion:onError:)"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,62 +41,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShoppingMadrid/ShopsApiManagerNSUrlSessionImpl.swift"
-            timestampString = "516321108.218736"
+            filePath = "ShoppingMadrid/ShopTableViewCell.swift"
+            timestampString = "516440450.412918"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "downloadShops(completion:onError:)"
-            landmarkType = "7">
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "ShopTableViewCell"
+            landmarkType = "3">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ShoppingMadrid.ShopsApiManagerNSUrlSessionImpl.(downloadShops (completion : (Swift.Array&lt;ShoppingMadrid.Shop&gt;) -&gt; (), onError : Swift.Optional&lt;(Swift.Error) -&gt; ()&gt;) -&gt; ()).(closure #1)"
+                  symbolName = "ShoppingMadrid.ShopTableViewCell.shop.setter : ShoppingMadrid.Shop"
                   moduleName = "ShoppingMadrid"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talentomobile/Desktop/ShoppingMadrid/ShoppingMadrid/ShopsApiManagerNSUrlSessionImpl.swift"
-                  timestampString = "516354945.89201"
+                  urlString = "file:///Users/talentomobile/Desktop/ShoppingMadrid/ShoppingMadrid/ShopTableViewCell.swift"
+                  timestampString = "516440660.60962"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "3145">
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "591">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ShoppingMadrid.ShopsApiManagerNSUrlSessionImpl.(downloadShops (completion : (Swift.Array&lt;ShoppingMadrid.Shop&gt;) -&gt; (), onError : Swift.Optional&lt;(Swift.Error) -&gt; ()&gt;) -&gt; ()).(closure #1).(closure #1)"
+                  symbolName = "ShoppingMadrid.ShopTableViewCell.shop.setter : ShoppingMadrid.Shop"
                   moduleName = "ShoppingMadrid"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talentomobile/Desktop/ShoppingMadrid/ShoppingMadrid/ShopsApiManagerNSUrlSessionImpl.swift"
-                  timestampString = "516354945.893818"
+                  urlString = "file:///Users/talentomobile/Desktop/ShoppingMadrid/ShoppingMadrid/ShopTableViewCell.swift"
+                  timestampString = "516440660.612991"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "23">
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "829">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShoppingMadrid/ShopsApiManagerNSUrlSessionImpl.swift"
-            timestampString = "516353951.18614"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "saveInDocumentsDirectoryWithImage(_:name:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

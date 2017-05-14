@@ -44,6 +44,7 @@ public class ShopsApiManagerNSUrlSessionImpl {
                         self.saveInDocumentsDirectoryWithImage(image, name: logoName)
                     })
                     allShops.append(shop!)
+                    
                 }
                 DispatchQueue.main.async {
                     self.saveInContext()

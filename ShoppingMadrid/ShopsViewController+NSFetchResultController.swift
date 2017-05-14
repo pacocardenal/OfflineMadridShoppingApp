@@ -7,7 +7,7 @@ extension ShopsViewController: NSFetchedResultsControllerDelegate {
             return _fetchedResultsController!
         }
         
-        _fetchedResultsController = NSFetchedResultsController(fetchRequest: Shop.fetchRequestOrderedByName(), managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: "Shop")
+        _fetchedResultsController = NSFetchedResultsController(fetchRequest: Shop.fetchRequestOrderedByName(), managedObjectContext: self.context!, sectionNameKeyPath: nil, cacheName: "Shop2")
         _fetchedResultsController?.delegate = self
         
         do {

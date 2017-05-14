@@ -21,6 +21,7 @@
 		E33D1A131EC115BF007E96C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33D1A111EC115BF007E96C9 /* Main.storyboard */; };
 		E33D1A151EC115BF007E96C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E33D1A141EC115BF007E96C9 /* Assets.xcassets */; };
 		E33D1A181EC115BF007E96C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33D1A161EC115BF007E96C9 /* LaunchScreen.storyboard */; };
+		E34F62F61EC6F51400230C03 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34F62F51EC6F51400230C03 /* ShopTableViewCell.swift */; };
 		E3C3C28B1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */; };
 		E3C3C28D1EC2682600A5F3B5 /* ShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C28C1EC2682600A5F3B5 /* ShopsInteractor.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		E33D1A171EC115BF007E96C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E33D1A191EC115BF007E96C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E33D1A251EC11872007E96C9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E34F62F51EC6F51400230C03 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
 		E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsApiManagerFakeImpl.swift; sourceTree = "<group>"; };
 		E3C3C28C1EC2682600A5F3B5 /* ShopsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +143,7 @@
 			children = (
 				E33D1A161EC115BF007E96C9 /* LaunchScreen.storyboard */,
 				E33D1A111EC115BF007E96C9 /* Main.storyboard */,
+				E34F62F51EC6F51400230C03 /* ShopTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			files = (
 				E31089F51EC50D2800C52F22 /* ShopsViewController+NSFetchResultController.swift in Sources */,
 				E31089F21EC50BA300C52F22 /* ShopsViewController.swift in Sources */,
+				E34F62F61EC6F51400230C03 /* ShopTableViewCell.swift in Sources */,
 				E33D1A101EC115BF007E96C9 /* ViewController.swift in Sources */,
 				E3C3C28D1EC2682600A5F3B5 /* ShopsInteractor.swift in Sources */,
 				E33D1A0E1EC115BF007E96C9 /* AppDelegate.swift in Sources */,

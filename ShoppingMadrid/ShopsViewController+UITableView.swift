@@ -11,9 +11,10 @@ extension ShopsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ShopCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ShopCell", for: indexPath) as! ShopTableViewCell
         
-        cell.textLabel?.text = self.fetchedResultsController.object(at: indexPath).name
+        //cell.textLabel?.text = self.fetchedResultsController.object(at: indexPath).name
+        cell.shop = self.fetchedResultsController.object(at: indexPath)
         
         return cell
     }

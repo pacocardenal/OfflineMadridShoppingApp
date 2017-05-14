@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,13 +58,40 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShopCell" rowHeight="44" id="Jdw-WG-VFm">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShopCell" rowHeight="44" id="Jdw-WG-VFm" customClass="ShopTableViewCell" customModule="ShoppingMadrid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jdw-WG-VFm" id="ERK-5N-4Um">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Ma-np-f7i">
+                                                    <rect key="frame" x="16" y="2" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="LZk-Yh-8uM"/>
+                                                        <constraint firstAttribute="width" constant="40" id="Zp5-zv-ZDg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS3-Zd-TKX">
+                                                    <rect key="frame" x="64" y="11.5" width="295" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.98575001959999997" green="0.61918824910000003" blue="0.029377464209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="9Ma-np-f7i" firstAttribute="leading" secondItem="ERK-5N-4Um" secondAttribute="leadingMargin" constant="8" id="IcK-3f-1u6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RS3-Zd-TKX" secondAttribute="trailing" constant="8" id="Idg-bD-rYj"/>
+                                                <constraint firstItem="RS3-Zd-TKX" firstAttribute="leading" secondItem="9Ma-np-f7i" secondAttribute="trailing" constant="8" id="S2f-bH-SMC"/>
+                                                <constraint firstItem="RS3-Zd-TKX" firstAttribute="centerY" secondItem="ERK-5N-4Um" secondAttribute="centerY" id="Y3w-ut-rfZ"/>
+                                                <constraint firstItem="9Ma-np-f7i" firstAttribute="centerY" secondItem="ERK-5N-4Um" secondAttribute="centerY" id="mAn-L8-195"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="logoImageView" destination="9Ma-np-f7i" id="84Q-9K-nO9"/>
+                                            <outlet property="nameLabel" destination="RS3-Zd-TKX" id="uhd-lk-zaf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
