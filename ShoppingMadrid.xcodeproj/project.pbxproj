@@ -24,6 +24,7 @@
 		E34F62F61EC6F51400230C03 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34F62F51EC6F51400230C03 /* ShopTableViewCell.swift */; };
 		E3C3C28B1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */; };
 		E3C3C28D1EC2682600A5F3B5 /* ShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C28C1EC2682600A5F3B5 /* ShopsInteractor.swift */; };
+		E3CE23A41EC86F500015CEFB /* ShopsApiManagerGCDImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CE23A31EC86F500015CEFB /* ShopsApiManagerGCDImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		E34F62F51EC6F51400230C03 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
 		E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsApiManagerFakeImpl.swift; sourceTree = "<group>"; };
 		E3C3C28C1EC2682600A5F3B5 /* ShopsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsInteractor.swift; sourceTree = "<group>"; };
+		E3CE23A31EC86F500015CEFB /* ShopsApiManagerGCDImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsApiManagerGCDImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */,
 				E31089F81EC5142900C52F22 /* ShopsApiManagerNSUrlSessionImpl.swift */,
+				E3CE23A31EC86F500015CEFB /* ShopsApiManagerGCDImpl.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				E3C3C28D1EC2682600A5F3B5 /* ShopsInteractor.swift in Sources */,
 				E33D1A0E1EC115BF007E96C9 /* AppDelegate.swift in Sources */,
 				E30C9EBA1EC3BAC8007CA1CE /* ShoppingMadrid.xcdatamodeld in Sources */,
+				E3CE23A41EC86F500015CEFB /* ShopsApiManagerGCDImpl.swift in Sources */,
 				E31089F71EC50D9300C52F22 /* ShopsViewController+UITableView.swift in Sources */,
 				E31089FD1EC5184500C52F22 /* Shop+Inits.swift in Sources */,
 				E31089F01EC5071E00C52F22 /* Shop+Utils.swift in Sources */,

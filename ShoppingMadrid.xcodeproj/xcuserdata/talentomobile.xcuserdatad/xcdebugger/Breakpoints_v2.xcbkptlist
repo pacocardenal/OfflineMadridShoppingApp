@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShoppingMadrid/ShopsViewController+UITableView.swift"
-            timestampString = "516356812.267521"
+            timestampString = "516451614.753681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
@@ -42,45 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShoppingMadrid/ShopTableViewCell.swift"
-            timestampString = "516440450.412918"
+            timestampString = "516451236.582939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "ShopTableViewCell"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShoppingMadrid.ShopTableViewCell.shop.setter : ShoppingMadrid.Shop"
-                  moduleName = "ShoppingMadrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talentomobile/Desktop/ShoppingMadrid/ShoppingMadrid/ShopTableViewCell.swift"
-                  timestampString = "516440660.60962"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "591">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShoppingMadrid.ShopTableViewCell.shop.setter : ShoppingMadrid.Shop"
-                  moduleName = "ShoppingMadrid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talentomobile/Desktop/ShoppingMadrid/ShoppingMadrid/ShopTableViewCell.swift"
-                  timestampString = "516440660.612991"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "829">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

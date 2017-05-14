@@ -29,14 +29,23 @@
                                     <segue destination="mQy-D2-iiB" kind="show" identifier="goShoppingSegue" id="ibb-Gv-24W"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="FEI-tK-Oqc">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eSI-KE-d2a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LdS-DT-xo5"/>
+                            <constraint firstItem="FEI-tK-Oqc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fTB-D8-lXs"/>
+                            <constraint firstItem="FEI-tK-Oqc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kBV-OS-q28"/>
                             <constraint firstItem="eSI-KE-d2a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oEn-We-Bm5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="o9q-VI-Hee"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="FEI-tK-Oqc" id="dW3-R8-oc7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,6 +105,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="mQy-D2-iiB" id="2CC-S5-Fau"/>
+                                    <outlet property="delegate" destination="mQy-D2-iiB" id="dsz-kq-SHo"/>
                                 </connections>
                             </tableView>
                         </subviews>
