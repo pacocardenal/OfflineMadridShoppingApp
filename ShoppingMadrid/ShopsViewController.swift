@@ -2,7 +2,7 @@ import UIKit
 import CoreData
 import MapKit
 
-class ShopsViewController: UIViewController {
+class ShopsViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var context: NSManagedObjectContext?
@@ -22,10 +22,11 @@ class ShopsViewController: UIViewController {
         let region = MKCoordinateRegion(center: madridLocation.coordinate, span: MKCoordinateSpanMake(0.2, 0.2))
         //mapView.setCenter(madridLocation.coordinate, animated: true)
         mapView.setRegion(region, animated: true)
+        self.mapView.delegate = self
     }
     
     func addPinsToMap() {
-        addPinToMapWithCoordinate(CLLocationCoordinate2D(latitude: 40.416775, longitude: -3.703790))
+        //addPinToMapWithCoordinate(CLLocationCoordinate2D(latitude: 40.416775, longitude: -3.703790))
         
         let fetchRequest = NSFetchRequest<Shop>(entityName: "Shop")
         
@@ -39,7 +40,7 @@ class ShopsViewController: UIViewController {
                 let latitude = shop.latitude
                 let longitude = shop .longitude
                 if (latitude != 0) && (longitude != 0) {
-                    addPinToMapWithCoordinate(CLLocationCoordinate2DMake(latitude, longitude))
+                    addPinToMapWithShop(shop)
                 }
             }
         }catch let err as NSError {
@@ -47,15 +48,60 @@ class ShopsViewController: UIViewController {
         }
     }
     
-    func addPinToMapWithCoordinate(_ coordinate: CLLocationCoordinate2D) {
-        let a1 = MapPin(coordinate: coordinate)
-//        a1.title = "Pin 1"
-//        a1.subtitle = "Subtitle 1"
+    func addPinToMapWithShop(_ shop: Shop) {
         
-        self.mapView.addAnnotation(a1)
+        let latitude = shop.latitude
+        let longitude = shop .longitude
+        if (latitude != 0) && (longitude != 0) {
+            let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+            let annotation = MapPin(coordinate: coordinate)
+            annotation.title = shop.name
+            //annotation.subtitle = "Subtitle 1"
+            
+            self.mapView.addAnnotation(annotation)
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        // Don't want to show a custom image if the annotation is the user's location.
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        
+        // Better to make this class property
+        let annotationIdentifier = "AnnotationIdentifier"
+        
+        var annotationView: MKAnnotationView?
+        if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
+            annotationView = dequeuedAnnotationView
+            annotationView?.annotation = annotation
+        }
+        else {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        
+        if let annotationView = annotationView {
+            // Configure your annotation view here
+            annotationView.canShowCallout = true
+            annotationView.image = UIImage(named: "mapPin")
+        }
+        
+        return annotationView
     }
 
 }
+
+func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+    guard !(view.annotation is MKUserLocation) else { return }
+    
+    mapView.setCenter((view.annotation?.coordinate)!, animated: true)
+}
+
+func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    print("tapped annotation " + ((view.annotation?.title)!)!)
+}
+
 
 class MapPin: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
