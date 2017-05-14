@@ -157,20 +157,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF3-ow-PIX">
-                                <rect key="frame" x="166" y="119" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF3-ow-PIX">
+                                <rect key="frame" x="7.5" y="119" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHZ-50-VP7">
+                                <rect key="frame" x="8" y="183" width="359" height="203"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcP-pE-pwD">
+                                <rect key="frame" x="7.5" y="394" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R89-ie-0Jn">
+                                <rect key="frame" x="27" y="431" width="320" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="9NJ-jM-woM"/>
+                                    <constraint firstAttribute="height" constant="220" id="DBz-NN-YDd"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.9993161559" green="0.57788419719999995" blue="0.0011074217039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UcP-pE-pwD" firstAttribute="width" secondItem="mF3-ow-PIX" secondAttribute="width" id="5bT-Gr-7xu"/>
+                            <constraint firstItem="mF3-ow-PIX" firstAttribute="width" secondItem="BS9-5U-zv0" secondAttribute="width" constant="-16" id="69D-5u-fxc"/>
+                            <constraint firstItem="p2D-hA-BGD" firstAttribute="top" secondItem="R89-ie-0Jn" secondAttribute="bottom" constant="16" id="MAy-eb-3aa"/>
+                            <constraint firstItem="qHZ-50-VP7" firstAttribute="top" secondItem="mF3-ow-PIX" secondAttribute="bottom" constant="43" id="MQv-gX-gRA"/>
+                            <constraint firstItem="R89-ie-0Jn" firstAttribute="top" secondItem="UcP-pE-pwD" secondAttribute="bottom" constant="16" id="MWE-xa-QGu"/>
                             <constraint firstItem="mF3-ow-PIX" firstAttribute="centerX" secondItem="BS9-5U-zv0" secondAttribute="centerX" id="Nlj-4o-hX3"/>
+                            <constraint firstItem="UcP-pE-pwD" firstAttribute="height" secondItem="mF3-ow-PIX" secondAttribute="height" id="QPS-HC-mVg"/>
+                            <constraint firstItem="R89-ie-0Jn" firstAttribute="centerX" secondItem="BS9-5U-zv0" secondAttribute="centerX" id="XA7-tq-yHk"/>
+                            <constraint firstItem="UcP-pE-pwD" firstAttribute="leading" secondItem="mF3-ow-PIX" secondAttribute="leading" id="ac3-jV-um0"/>
+                            <constraint firstItem="qHZ-50-VP7" firstAttribute="bottom" secondItem="UcP-pE-pwD" secondAttribute="top" constant="-8" id="c2o-sT-MN8"/>
                             <constraint firstItem="mF3-ow-PIX" firstAttribute="top" secondItem="WAC-BI-pQa" secondAttribute="bottom" constant="55" id="dQt-Ms-skj"/>
+                            <constraint firstItem="qHZ-50-VP7" firstAttribute="centerX" secondItem="BS9-5U-zv0" secondAttribute="centerX" id="eeS-nX-Dfz"/>
+                            <constraint firstItem="UcP-pE-pwD" firstAttribute="centerX" secondItem="mF3-ow-PIX" secondAttribute="centerX" id="mdq-6W-Rqo"/>
+                            <constraint firstItem="qHZ-50-VP7" firstAttribute="width" secondItem="mF3-ow-PIX" secondAttribute="width" id="uqv-3f-wRy"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="UcP-pE-pwD" id="cSX-FY-FHs"/>
+                        <outlet property="descriptionLabel" destination="qHZ-50-VP7" id="nYx-CQ-89Y"/>
                         <outlet property="nameLabel" destination="mF3-ow-PIX" id="VcE-SS-FX4"/>
                     </connections>
                 </viewController>
