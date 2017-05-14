@@ -31,7 +31,19 @@ public class ShopsApiManagerGCDImpl {
                 //var logo: String?
                 for aShop in shops {
                     //logo = self.getFilenameFromUrl(url: aShop["logo_img"] as! String)
-                    shop = Shop(context: context, name: aShop["name"] as! String, logoUrl: aShop["logo_img"] as! String, logoName: self.getFilenameFromUrl(aShop["logo_img"] as! String))
+                    var latitude: Double
+                    var longitude: Double
+                    if let lat = Double(aShop["gps_lat"] as! String) {
+                        latitude = lat
+                    } else {
+                        latitude = 0
+                    }
+                    if let lon = Double(aShop["gps_lon"] as! String) {
+                        longitude = lon
+                    } else {
+                        longitude = 0
+                    }
+                    shop = Shop(context: context, name: aShop["name"] as! String, logoUrl: aShop["logo_img"] as! String, logoName: self.getFilenameFromUrl(aShop["logo_img"] as! String), latitude: latitude, longitude: longitude)
                     self.downloadShopImage(shop: shop!, completion: { (image, theShop) in
                         guard let logoName = theShop.logoName else { return }
                         self.saveInDocumentsDirectoryWithImage(image, name: logoName)

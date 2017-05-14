@@ -1,4 +1,5 @@
 import UIKit
+import MapKit
 
 extension ShopsViewController: UITableViewDataSource {
     
@@ -16,7 +17,12 @@ extension ShopsViewController: UITableViewDataSource {
         //cell.textLabel?.text = self.fetchedResultsController.object(at: indexPath).name
         cell.shop = self.fetchedResultsController.object(at: indexPath)
         //cell.nameLabel.text = "Test"
-        
+//        let latitude = self.fetchedResultsController.object(at: indexPath).latitude
+//        let longitude = self.fetchedResultsController.object(at: indexPath).longitude
+//        
+//        if (latitude != 0) && (longitude != 0) {
+//            addPinToMapWithCoordinate(CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+//        }
         return cell
     }
     

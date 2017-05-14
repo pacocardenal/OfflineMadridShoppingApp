@@ -11,8 +11,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //activityIndicator.startAnimating()
+    
         //getShops()
         
     }
@@ -21,6 +20,7 @@ class ViewController: UIViewController {
         assert(Thread.current == Thread.main)
         guard let context = context else { return }
         
+        activityIndicator.startAnimating()
         ShopsInteractor(manager: ShopsApiManagerGCDImpl(context: context), context: context).execute { (shops) in
             self.shops = shops
             
