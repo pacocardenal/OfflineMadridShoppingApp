@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         self.context = container.viewContext
-        zapDataInCoreDataEntity(entity: "Shop")
+        //zapDataInCoreDataEntity(entity: "Shop")
         
         injectContextToFirstViewController()
         

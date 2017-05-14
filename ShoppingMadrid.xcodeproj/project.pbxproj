@@ -25,6 +25,7 @@
 		E3C3C28B1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */; };
 		E3C3C28D1EC2682600A5F3B5 /* ShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3C28C1EC2682600A5F3B5 /* ShopsInteractor.swift */; };
 		E3CE23A41EC86F500015CEFB /* ShopsApiManagerGCDImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CE23A31EC86F500015CEFB /* ShopsApiManagerGCDImpl.swift */; };
+		E3CE23A61EC876D00015CEFB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE23A51EC876D00015CEFB /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		E3C3C28A1EC2614F00A5F3B5 /* ShopsApiManagerFakeImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsApiManagerFakeImpl.swift; sourceTree = "<group>"; };
 		E3C3C28C1EC2682600A5F3B5 /* ShopsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsInteractor.swift; sourceTree = "<group>"; };
 		E3CE23A31EC86F500015CEFB /* ShopsApiManagerGCDImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsApiManagerGCDImpl.swift; sourceTree = "<group>"; };
+		E3CE23A51EC876D00015CEFB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3CE23A61EC876D00015CEFB /* MapKit.framework in Frameworks */,
 				E30C9EB71EC3BA92007CA1CE /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +69,7 @@
 		E30C9EB51EC3BA92007CA1CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3CE23A51EC876D00015CEFB /* MapKit.framework */,
 				E30C9EB61EC3BA92007CA1CE /* CoreData.framework */,
 			);
 			name = Frameworks;
@@ -220,6 +224,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = L29LUZH6XZ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

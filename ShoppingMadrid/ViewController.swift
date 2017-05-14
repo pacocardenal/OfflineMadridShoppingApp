@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        activityIndicator.startAnimating()
-        getShops()
+        //activityIndicator.startAnimating()
+        //getShops()
         
     }
     
